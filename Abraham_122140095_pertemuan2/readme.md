@@ -46,3 +46,4 @@ Digunakan untuk menangani fungsi pengupdatean waktu secara real-time, memastikan
 
 11. Promises
 Digunakan untuk menangani operasi asynchronous seperti simulasi pengecekan API atau proses yang membutuhkan waktu, untuk menjaga UI tetap responsif.
+![image](https://github.com/user-attachments/assets/9906f1f9-e664-43f3-8c69-39c0db7c7386)
