@@ -1,8 +1,8 @@
-Dashboard Abraham
+# Dashboard Abraham
 
 Dashboard Abraham adalah aplikasi web untuk mengelola tugas, catatan, dan jadwal dengan antarmuka yang sederhana dan responsif. Aplikasi ini memungkinkan pengguna untuk menambahkan, mengedit, dan menghapus tugas, catatan, serta acara jadwal secara mudah, dengan pembaruan waktu secara real-time.
 
-Fitur-Fitur
+## Fitur-Fitur
 1. Task Management
 Menambah, mengedit, menandai tugas sebagai selesai, dan menghapus tugas yang tidak diperlukan lagi.
 
@@ -21,7 +21,7 @@ Tampilan yang responsif dan desain yang menarik dengan interaksi yang mudah diak
 6. Dark Mode UI
 Desain gelap untuk kenyamanan mata saat digunakan di malam hari.
 
-Fitur-Fitur ES6+ yang Diimplementasikan
+## Fitur-Fitur ES6+ yang Diimplementasikan
 Aplikasi ini menggunakan fitur-fitur ES6 dan fitur JavaScript modern lainnya untuk meningkatkan kinerja dan kemudahan pengembangan. Berikut adalah daftar fitur ES6+ yang diimplementasikan dalam aplikasi:
 
 1. Class Syntax
