@@ -1,49 +1,99 @@
-Fitur-Fitur
-Task Management: Pengguna dapat menambahkan tugas, mengeditnya, menandainya sebagai selesai, dan menghapus tugas yang tidak lagi diperlukan.
+Dashboard Abraham
+Aplikasi Dashboard Abraham adalah aplikasi web untuk mengelola tugas, catatan, dan jadwal dengan antarmuka yang sederhana dan mudah digunakan. Aplikasi ini menyimpan data di localStorage browser, memungkinkan Anda untuk menambahkan, mengedit, menghapus tugas, catatan, dan acara sesuai kebutuhan.
 
-Note Management: Pengguna dapat menambahkan catatan pribadi, mengeditnya, dan menghapus catatan yang sudah tidak diperlukan lagi.
+Fitur
+Tugas: Menambah, mengedit, menyelesaikan, dan menghapus tugas.
 
-Schedule Management: Pengguna dapat menambahkan acara dengan waktu dan tanggal tertentu, serta melihat status acara (apakah sudah berlalu atau akan datang).
+Catatan: Menambah, menghapus, dan menampilkan catatan.
 
-Real-Time Date & Time: Tampilan tanggal dan waktu yang selalu diperbarui secara real-time.
+Jadwal: Menambah, menghapus, dan melihat acara berdasarkan waktu.
 
-Interaktif UI: Tampilan yang responsif dan desain yang menarik dengan interaksi yang mudah diakses.
+Tanggal & Waktu: Menampilkan tanggal dan waktu saat ini, serta memberikan pembaruan waktu secara real-time.
 
-Dark Mode UI: Desain gelap untuk kenyamanan mata saat digunakan di malam hari.
+Teknologi
+HTML5 untuk struktur halaman.
 
-Fitur-Fitur ES6+ yang Diimplementasikan
-Aplikasi ini menggunakan fitur ES6 dan fitur JavaScript modern lainnya untuk meningkatkan kinerja dan kemudahan pengembangan. Berikut adalah daftar fitur ES6+ yang diimplementasikan dalam aplikasi:
+CSS3 untuk styling dan tata letak responsif.
 
-1. Class Syntax
-Digunakan untuk mendefinisikan DashboardApp dan DataManager (untuk task, note, dan schedule) yang mengelola data dan interaksi di aplikasi.
+JavaScript (ES6) untuk logika aplikasi, termasuk manajemen tugas, catatan, dan jadwal.
 
-2. Modules
-Aplikasi ini dibangun dengan menggunakan ES6 Modules untuk pemisahan kode yang lebih modular dan terorganisir. Beberapa file seperti app.js, data.js, dan utils.js dipisahkan menjadi modul-modul untuk menangani fungsionalitas yang berbeda.
+localStorage untuk menyimpan data secara lokal di browser.
 
-3. Arrow Functions
-Menggunakan fungsi panah untuk penulisan fungsi yang lebih ringkas dan efisien, seperti pada event listeners dan callback functions.
+Modular JavaScript dengan penggunaan import dan export.
 
-4. Async/Await
-Digunakan untuk menangani operasi asinkron seperti pemanggilan API atau simulasi pengecekan status dengan cara yang lebih mudah dibaca dan ditulis.
+Penjelasan Kode
+index.html
+File utama yang memuat struktur HTML dari aplikasi. Ini berisi:
 
-5. Template Literals
-Template literals digunakan untuk membangun string dinamis yang lebih mudah dibaca, seperti dalam pembuatan elemen HTML di dalam fungsi renderTaskItem, renderNoteItem, dan renderScheduleItem.
+Form untuk menambah tugas, catatan, dan jadwal.
 
-6. Destructuring
-Digunakan untuk mengekstrak nilai dari objek atau array dengan cara yang lebih ringkas, misalnya untuk menangani data tugas dan catatan.
+Daftar tugas, catatan, dan jadwal yang ditampilkan di halaman.
 
-7. Spread Operator
-Digunakan untuk menyalin atau menggabungkan array dan objek dengan cara yang lebih efisien.
+Waktu dan tanggal yang terus diperbarui setiap detik.
 
-8. Default Parameters
-Beberapa fungsi menggunakan parameter default untuk menangani kasus di mana argumen tidak diberikan.
+css/style.css
+File CSS yang memberikan desain responsif dan penataan layout untuk aplikasi. Anda bisa mengeditnya untuk menyesuaikan tampilan dan nuansa aplikasi.
 
-9. Event Listeners
-Menggunakan event listeners untuk menangani berbagai aksi interaktif dalam aplikasi, seperti klik tombol untuk menambah, mengedit, dan menghapus tugas atau catatan.
+js/main.js
+File JavaScript utama yang memulai aplikasi saat halaman dimuat. Di sini kita menginisialisasi instance dari DashboardApp dan melakukan simulasi pemeriksaan API yang diselesaikan setelah satu detik.
 
-10. SetTimeout and SetInterval
-Digunakan untuk menangani fungsi pengupdatean waktu secara real-time, memastikan tampilan waktu selalu terbarui setiap detiknya.
+js/app.js
+File yang mengelola logika aplikasi. Di sini terdapat 3 komponen utama:
 
-11. Promises
-Digunakan untuk menangani operasi asynchronous seperti simulasi pengecekan API atau proses yang membutuhkan waktu, untuk menjaga UI tetap responsif.
+TaskManager: Menambah, mengedit, menghapus, dan menandai tugas sebagai selesai.
+
+NoteManager: Menambah dan menghapus catatan.
+
+ScheduleManager: Menambah dan menghapus acara, serta menampilkan acara berdasarkan waktu.
+
+js/data.js
+File yang berisi kelas TaskManager, NoteManager, dan ScheduleManager yang masing-masing menangani data tugas, catatan, dan jadwal menggunakan localStorage.
+
+js/utils.js
+Berisi berbagai fungsi utilitas untuk memformat tanggal, waktu, serta menghitung waktu relatif antara sekarang dan waktu tertentu.
+
+Fitur Utama
+1. Manajemen Tugas
+Pengguna dapat menambah tugas baru dengan mengetikkan deskripsi di input dan mengklik tombol Tambah.
+
+Setiap tugas dapat diselesaikan atau dibatalkan penyelesaiannya.
+
+Tugas dapat diedit dan dihapus.
+
+2. Manajemen Catatan
+Pengguna dapat menambah catatan baru.
+
+Setiap catatan dapat dihapus.
+
+3. Manajemen Jadwal
+Pengguna dapat menambah acara baru dengan menentukan judul kegiatan dan waktu.
+
+Acara ditampilkan dengan status "UpComing" atau "Past" (tergantung apakah acara sudah berlalu atau belum).
+
+Acara dapat dihapus.
+
+4. Tanggal dan Waktu
+Waktu dan tanggal saat ini ditampilkan di bagian header.
+
+Waktu ini diperbarui setiap detik secara real-time.
+
+Fungsi Utilitas
+formatDate(dateString)
+Memformat tanggal dalam format lokal Indonesia (ID).
+
+formatTime(dateString)
+Memformat waktu dalam format lokal Indonesia (ID).
+
+isPast(dateString)
+Memeriksa apakah tanggal yang diberikan sudah lewat.
+
+formatRelativeTime(dateString)
+Menampilkan waktu dalam format relatif, misalnya "1 menit yang lalu", "dalam 2 jam", dll.
+
+updateDateTime()
+Memperbarui elemen waktu di halaman setiap detik.
+
+generateId()
+Menghasilkan ID unik berdasarkan waktu saat ini dan angka acak.
+
 ![image](https://github.com/user-attachments/assets/9906f1f9-e664-43f3-8c69-39c0db7c7386)
