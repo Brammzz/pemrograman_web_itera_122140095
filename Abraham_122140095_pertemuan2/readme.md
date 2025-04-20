@@ -1,4 +1,4 @@
-Fitur-Fitur
+## Fitur-Fitur
 Task Management: Pengguna dapat menambahkan tugas, mengeditnya, menandainya sebagai selesai, dan menghapus tugas yang tidak lagi diperlukan.
 
 Note Management: Pengguna dapat menambahkan catatan pribadi, mengeditnya, dan menghapus catatan yang sudah tidak diperlukan lagi.
@@ -11,7 +11,7 @@ Interaktif UI: Tampilan yang responsif dan desain yang menarik dengan interaksi 
 
 Dark Mode UI: Desain gelap untuk kenyamanan mata saat digunakan di malam hari.
 
-Fitur-Fitur ES6+ yang Diimplementasikan
+## Fitur-Fitur ES6+ yang Diimplementasikan
 Aplikasi ini menggunakan fitur ES6 dan fitur JavaScript modern lainnya untuk meningkatkan kinerja dan kemudahan pengembangan. Berikut adalah daftar fitur ES6+ yang diimplementasikan dalam aplikasi:
 
 1. Class Syntax
