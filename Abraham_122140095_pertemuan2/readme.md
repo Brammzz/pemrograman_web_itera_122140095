@@ -49,4 +49,6 @@ Digunakan untuk menangani operasi asynchronous seperti simulasi pengecekan API a
 
 Screenshoot Aplikasi :
 ![image](https://github.com/user-attachments/assets/caa17e96-a918-42bc-a285-e9512eb31cc3)
+![image](https://github.com/user-attachments/assets/f50dc44a-6706-422c-8db6-978cd8ad59cc)
+
 
