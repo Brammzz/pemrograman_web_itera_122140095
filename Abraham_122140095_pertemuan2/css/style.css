@@ -1,0 +1,326 @@
+/* Reset dan Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container Utama */
+.dashboard-container {
+  max-width: 1024px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1db954;
+}
+
+.datetime {
+  font-size: 0.95rem;
+  color: #b3b3b3;
+  margin-top: 0.25rem;
+}
+
+/* Section */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Kartu */
+.card {
+  background-color: #181818;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2a2a2a;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #2a2a2a;
+  color: #fff;
+  flex: 1;
+  min-width: 150px;
+}
+
+.input-group input::placeholder {
+  color: #999;
+}
+
+/* Tombol */
+.btn {
+  background-color: #1db954;
+  color: #fff;
+  padding: 0.6rem 1.25rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #1ed760;
+}
+
+/* Daftar Tugas */
+.list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #242424;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  margin-bottom: 0.6rem;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-text {
+  font-size: 1rem;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.task-actions button {
+  margin-left: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  background-color: transparent;
+  border: none;
+  color: #1db954;
+  cursor: pointer;
+}
+
+.task-actions button:hover {
+  color: #1ed760;
+}
+
+/* Edit Tugas */
+.task-edit-input {
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* Catatan */
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.note-card {
+  background-color: #282828;
+  border-radius: 12px;
+  padding: 1rem;
+  position: relative;
+  border: 1px solid #3a3a3a;
+}
+
+.note-card p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.note-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.note-card small {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.note-delete {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  color: #ff4d4f;
+  cursor: pointer;
+}
+
+.note-delete:hover {
+  color: #ff7779;
+}
+
+/* Jadwal */
+.schedule-item {
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #242424;
+  border-left: 6px solid #1db954;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.schedule-item.past {
+  border-left-color: #ff4d4f;
+  opacity: 0.6;
+}
+
+.schedule-time {
+  font-weight: 600;
+  color: #ccc;
+}
+
+.schedule-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0.2rem 0;
+}
+
+.schedule-relative {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.schedule-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #ff4d4f;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.schedule-delete:hover {
+  color: #ff7779;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .task-item,
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Edit Catatan */
+.note-edit-input {
+  width: 100%;
+  height: 100px;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  font-size: 1rem;
+  resize: none;
+  margin-bottom: 0.75rem;
+}
+
+.note-edit-input:focus {
+  outline: none;
+  border-color: #1db954;
+}
+
+.save-note-btn,
+.cancel-note-btn {
+  background-color: #1db954;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.save-note-btn:hover,
+.cancel-note-btn:hover {
+  background-color: #1ed760;
+}
+
+.cancel-note-btn {
+  background-color: #ff4d4f;
+}
+
+.cancel-note-btn:hover {
+  background-color: #ff7779;
+}
+
+/* Kartu Catatan */
+.note-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.note-card p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.note-card small {
+  color: #999;
+}

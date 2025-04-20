@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Abraham</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <h1>Dashboard Abraham</h1>
+        <div id="dateTime" class="datetime"></div>
+      </header>
+
+      <main class="dashboard-content">
+        <!-- Tugas -->
+        <section class="section card">
+          <h2 class="section-title">Tugas</h2>
+          <div class="input-group">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Deskripsi tugas..."
+            />
+            <input type="date" id="taskDeadline" />
+            <select id="taskPriority">
+              <option value="low">Rendah</option>
+              <option value="medium">Sedang</option>
+              <option value="high">Tinggi</option>
+            </select>
+            <button id="addTaskBtn" class="btn">Tambah</button>
+          </div>
+          <ul id="taskList" class="list"></ul>
+        </section>
+
+        <!-- Catatan -->
+        <section class="section card">
+          <h2 class="section-title">Catatan</h2>
+          <div class="input-group">
+            <input
+              type="text"
+              id="noteTitleInput"
+              placeholder="Judul catatan..."
+            />
+            <input type="text" id="noteInput" placeholder="Isi catatan..." />
+            <button id="addNoteBtn" class="btn">Tambah</button>
+          </div>
+          <div id="notesList" class="notes-list"></div>
+        </section>
+
+        <!-- Jadwal -->
+        <section class="section card">
+          <h2 class="section-title">Jadwal</h2>
+          <div class="input-group">
+            <input
+              type="text"
+              id="scheduleTitle"
+              placeholder="Judul kegiatan"
+            />
+            <input type="datetime-local" id="scheduleTime" />
+            <button id="addScheduleBtn" class="btn">Tambah</button>
+          </div>
+          <div id="scheduleList" class="schedule-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
