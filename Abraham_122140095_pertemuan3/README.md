@@ -2,7 +2,11 @@
 
 Bram.BookShelf adalah aplikasi web yang dikembangkan menggunakan React untuk membantu pengguna mengelola koleksi buku pribadi mereka. Dengan BookShelf, pengguna dapat mencatat buku-buku yang dimiliki, sedang dibaca, atau ingin dibeli, serta mencari dan memfilter daftar buku mereka dengan mudah.
 
-![Screenshot Aplikasi BookShelf](./screenshot.png)
+## Screenshot Aplikasi Bram.BookShelf
+1. Beranda : ![image](https://github.com/user-attachments/assets/d4810097-2573-4481-a0a0-c58f24c0a0de)
+2. Statistik : ![image](https://github.com/user-attachments/assets/6dddbeba-0409-4ff9-a674-08d2adc4106d)
+3. Form Tambah Buku : ![image](https://github.com/user-attachments/assets/107af3b9-5ebd-40b5-9501-3e8ce15f3914)
+4. Form Edit Buku : ![image](https://github.com/user-attachments/assets/8b53f6f8-d9f6-4536-a018-189f6be0e5cc)
 
 ## Deskripsi Aplikasi
 
