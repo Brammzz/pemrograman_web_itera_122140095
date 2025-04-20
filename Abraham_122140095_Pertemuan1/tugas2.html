@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Lanjutan</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .container {
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 2.2rem;
+      }
+
+      .calculator {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .input-group {
+        display: flex;
+        gap: 10px;
+      }
+
+      .input-group input {
+        flex: 1;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: border 0.3s ease;
+      }
+
+      .input-group input:focus {
+        border-color: #3498db;
+      }
+
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+      }
+
+      #btn-tambah {
+        background-color: #3498db; 
+      }
+
+      #btn-kurang {
+        background-color: #e74c3c; 
+      }
+
+      #btn-kali {
+        background-color: #2ecc71; 
+      }
+
+      #btn-bagi {
+        background-color: #9b59b6;
+      }
+
+      #btn-pangkat {
+        background-color: #f1c40f; 
+      }
+
+      #btn-modulus {
+        background-color: #e67e22; 
+      }
+
+      #btn-akar {
+        background-color: #1abc9c; 
+      }
+
+      #hasil-kalkulator {
+        margin-top: 15px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #7f8c8d;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Lanjutan</h1>
+        <div class="calculator">
+            <div class="input-group">
+                <input type="number" id="angka1" placeholder="Angka 1">
+                <input type="number" id="angka2" placeholder="Angka 2">
+            </div>
+            <div class="button-grid">
+                <button id="btn-tambah" class="btn">+</button>
+                <button id="btn-kurang" class="btn">-</button>
+                <button id="btn-kali" class="btn">×</button>
+                <button id="btn-bagi" class="btn">÷</button>
+                <button id="btn-pangkat" class="btn">^</button>
+                <button id="btn-modulus" class="btn">%</button>
+            </div>
+            <button id="btn-akar" class="btn">√ (Akar Kuadrat)</button>
+            <div id="hasil-kalkulator"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn-tambah").addEventListener("click", function () {
+            calculate("tambah");
+        });
+        document.getElementById("btn-kurang").addEventListener("click", function () {
+            calculate("kurang");
+        });
+        document.getElementById("btn-kali").addEventListener("click", function () {
+            calculate("kali");
+        });
+        document.getElementById("btn-bagi").addEventListener("click", function () {
+            calculate("bagi");
+        });
+        document.getElementById("btn-pangkat").addEventListener("click", function () {
+            calculate("pangkat");
+        });
+        document.getElementById("btn-modulus").addEventListener("click", function () {
+            calculate("modulus");
+        });
+        document.getElementById("btn-akar").addEventListener("click", function () {
+            calculate("akar");
+        });
+
+        function calculate(operation) {
+            const angka1 = parseFloat(document.getElementById("angka1").value);
+            const angka2 = parseFloat(document.getElementById("angka2").value);
+            let hasil;
+
+            if (operation !== "akar" && (isNaN(angka1) || isNaN(angka2))) {
+                document.getElementById("hasil-kalkulator").textContent = "Masukkan angka yang valid!";
+                return;
+            }
+
+            switch (operation) {
+                case "tambah":
+                    hasil = angka1 + angka2;
+                    break;
+                case "kurang":
+                    hasil = angka1 - angka2;
+                    break;
+                case "kali":
+                    hasil = angka1 * angka2;
+                    break;
+                case "bagi":
+                    hasil = angka2 !== 0 ? angka1 / angka2 : "Error: Pembagian oleh nol";
+                    break;
+                case "pangkat":
+                    hasil = Math.pow(angka1, angka2);
+                    break;
+                case "modulus":
+                    hasil = angka1 % angka2;
+                    break;
+                case "akar":
+                    const angka = parseFloat(document.getElementById("angka1").value);
+                    if (isNaN(angka)) {
+                        document.getElementById("hasil-kalkulator").textContent = "Masukkan angka yang valid!";
+                        return;
+                    }
+                    hasil = Math.sqrt(angka);
+                    break;
+                default:
+                    hasil = "Operasi tidak valid";
+            }
+
+            document.getElementById("hasil-kalkulator").textContent = `Hasil: ${hasil}`;
+        }
+    </script>
+</body>
+</html>
